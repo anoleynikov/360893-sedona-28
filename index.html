@@ -105,9 +105,29 @@
                </p>
             </div>
          </section>
-         <section>
+         <section class="interest">
             <h2>ЗАИНТЕРЕСОВАЛИСЬ ?</h2>
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+         </section>
+         <section class="booking">
+            <h2>Поиск гостиницы в Седоне</h2>
+            <form class="booking_form" action="index.html" method="post">
+               <div class="arriving_form">
+                  <label for="arr">Дата заезда:</label>
+                  <input type="date" name="arriving" id="arr" value="">
+               </div>
+               <div class="departure_form">
+                  <label for="dep">Дата выезда:</label>
+                  <input type="date" name="departure" id="dep" value="">
+               </div>
+               <div class="counting_form">
+                  <label for="ad">Взрослые:</label>
+                  <input type="number" name="adult" id="ad" value="">
+                  <label for="ch">Дети:</label>
+                  <input type="number" name="child" id="ch" value="">
+               </div>
+               <button type="submit" name="find">Найти</button>
+            </form>
          </section>
          <section class="map">
             <!--карта -->
