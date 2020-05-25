@@ -30,23 +30,23 @@
       </header>
       <main>
         <section class="selection">
-         <form class="select_house" action="index.html" method="post">
+         <form class="selection-form" action="https://echo.htmlacademy.ru/courses" method="post">
             <h2>Инфраструктура:</h2>
             <ul class="infra">
-               <li><input type="checkbox" name="check1" value="">Бассейн</li>
-               <li><input type="checkbox" name="check2" value="">Парковка</li>
-               <li><input type="checkbox" name="check3" value="">wi-fi</li>
+               <li><input type="checkbox" id="ch1" name="check1" value="pool"><label for="ch1">Бассейн</label></li>
+               <li><input type="checkbox" id="ch2" name="check2" value="parking"><label for="ch2">Парковка</label></li>
+               <li><input type="checkbox" id="ch3" name="check3" value="wf"><label for="ch3">wi-fi</label></li>
             </ul>
             <h2>Тип жилья:</h2>
             <ul class="housing">
-               <li><input type="checkbox" name="check4" value="">Гостиница</li>
-               <li><input type="checkbox" name="check5" value="">Мотель</li>
-               <li><input type="checkbox" name="check6" value="">Апартаменты</li>
+               <li><input type="checkbox" id="ch4" name="check4" value="hotel"><label for="ch4">Гостиница</label></li>
+               <li><input type="checkbox" id="ch5" name="check5" value="motel"><label for="ch5">Мотель</label></li>
+               <li><input type="checkbox" id="ch6" name="check6" value="apartments"><label for="ch6">Апартаменты</label></li>
             </ul>
             <div class="price">
                <h2>Стоимость в сутки(Р):</h2>
-               <span class="price_range">от 0 до 3000</span>
-               <input type="range" name="price" min="0" max="3000">
+               <span class="price-range">от <input type="number" id="mn1" name="min1" value="0"> до <input type="number" name="max1" id="mx1" value="3000"></span>
+               <input type="range" name="price" min="mn1" max="mx1" value="pr-range">
                <input type="submit" name="show" value="Показать">
             </div>
          </form>
