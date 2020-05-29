@@ -1,0 +1,158 @@
+
+
+
+/*-------------- Общие свойства----------------- */
+nav{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+}
+nav li {
+list-style-type: none;
+}
+nav a{
+  color: black;
+  text-decoration: none;
+}
+.contacts a{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color:black;
+  text-decoration: none;
+}
+.academy span{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/*----------------Свойства для index---------------*/
+.begin{
+ background-image: url(img/background-photo.png);
+ background-repeat: no-repeat;
+}
+.descr h1{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+}
+.descr p{
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+}
+.reasons-item{
+  background-color: #81B3D2;
+
+}
+.reasons-item h3{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.reasons-item span, .reasons-item p {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+.advantages-item h3{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  background-color: white;
+}
+
+.advantages-item p{
+  font-family: PT Sans;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 21px;
+}
+
+.interest h2{
+  font-family: PT Sans;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black ;
+}
+.interest p{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.booking h2{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 26px;
+  color: white;
+}
+.booking , input{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+}
+.find {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  background: #81B3D2;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+}
+/*--------------------Свойства для hotels-----------------*/
