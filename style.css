@@ -6,6 +6,7 @@
 --item-color: #81B3D2;
 --black-font:#000000;
 --white-font: #FFFFFF;
+--selection-color: #81B3D2;
 }
 .menu{
   font-family: "PT Sans", Arial, sans-serif;
@@ -159,7 +160,7 @@
 }
 /*--------------------Свойства для hotels-----------------*/
 .selection {
-  background-color: #81B3D2;
+  background-color: var(--selection-color);
 }
 .selection-form h2{
   font-family: "PT Sans", Arial, sans-serif;
