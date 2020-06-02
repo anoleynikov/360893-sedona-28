@@ -7,10 +7,36 @@
 --black-font:#000000;
 --white-font: #FFFFFF;
 --selection-color: #81B3D2;
+--features-gray: #EEEEEE;
 }
-.menu{
+body{
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.site-navigation{
+  list-style: none;
+}
+.page{
+  height:100%;
+
+}
+.page-body{
+  min-height:100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+.site-navigation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu{
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
@@ -18,16 +44,12 @@
   text-transform: uppercase;
   color: var(--black-font);
 }
-.menu li {
-  list-style-type: none;
-}
 .menu a{
   color: var(--black-font);
   text-decoration: none;
 }
 .contacts a{
   font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -37,22 +59,44 @@
   text-decoration: none;
 }
 .academy span{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
 }
+.main-footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 60px 0;
+  margin-top: 65px;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+
+}
+.contacts{
+  display: flex;
+  justify-content: center;
+}
+.academy{
+  display: flex;
+  justify-content: center;
+}
 /*----------------Свойства для index---------------*/
 .begin{
- background-image: url(../img/background-photo.png);
+ background-image: url(img/background-photo.png);
  background-repeat: no-repeat;
 }
+.descr{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .descr h1{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -61,57 +105,72 @@
   text-align: center;
 }
 .descr p{
-  font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
 }
+.reasons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+}
 .reasons-item{
   background-color: var(--item-color);
+  text-align:center;
 }
 .reasons-item h3{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--white-font);
   font-size: 21px;
   line-height: 21px;
-  text-align: center;
 }
-
 .reasons-item span, .reasons-item p {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
   color: var(--white-font);
   font-size: 14px;
   line-height: 21px;
-  text-align: center;
+}
+.features{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  background-color: var(--features-gray);
+}
+.features-item{
+  justify-self: center;
+  text-align:center;
+}
+.advantages{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-font)
 }
 .advantages-item h3{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
-  background-color: var(--white-font);
 }
 
 .advantages-item p{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
   line-height: 21px;
 }
-
+.interest{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .interest h2{
-  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
@@ -120,8 +179,6 @@
   color: var(--black-font) ;
 }
 .interest p{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
@@ -129,8 +186,6 @@
   text-transform: uppercase;
 }
 .booking h2{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   text-align: center;
@@ -139,16 +194,12 @@
   color: var(--white-font);
 }
 .booking, input[name="arriving"], input[name="departure"], input[name="adult"], input[name="child"]{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   color: var(--black-font);
   text-align: center;
   text-transform: uppercase;
 }
 .find {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -158,13 +209,12 @@
   color: var(--white-font);
   border: none;
 }
+
 /*--------------------Свойства для hotels-----------------*/
 .selection {
   background-color: var(--selection-color);
 }
 .selection-form h2{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
@@ -175,8 +225,6 @@
   list-style-type: none;
 }
 .infra, .housing{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
@@ -185,16 +233,12 @@
 }
 .price{
   color:var(--white-font);
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
 }
 
 .hotel h1{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -205,8 +249,6 @@
   text-decoration: none;
 }
 .hotel span{
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
