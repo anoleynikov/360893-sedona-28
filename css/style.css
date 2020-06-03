@@ -18,9 +18,6 @@ body{
   padding: 0;
   background-color: var(--features-gray);
 }
-.site-navigation{
-  list-style: none;
-}
 .container{
   min-width: 1200px;
 }
@@ -34,8 +31,10 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  list-style: none;
 }
 .menu{
+  padding: 0;
   min-width: 1200px;
   font-weight: bold;
   font-size: 14px;
@@ -99,7 +98,7 @@ body{
 .mainpic{
   display: flex;
   justify-content: center;
-  background: url(img/background-photo.png);
+  background: url(../img/background-photo.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -236,10 +235,10 @@ body{
 /*--------------------Свойства для hotels-----------------*/
 .selection {
   background-color: var(--selection-color);
-  background-image: url(img/blur-photo.png);
+  background-image: url(../img/blur-photo.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 30px;
+  padding: 20px;
 }
 .selection-form{
   display: grid;
@@ -248,7 +247,7 @@ body{
 .housing{
   display: flex;
   flex-direction: row;
-
+  justify-content: space-around;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
@@ -258,8 +257,19 @@ body{
 .infra{
   display: flex;
   flex-direction: column;
-  outline:2px solid blue;
-  padding-right: 100px;
+}
+.infra-head{
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
+}
+.type-head{
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
+}
+.housing li{
+  padding:20px 0px;
 }
 .type{
   display: flex;
@@ -280,6 +290,7 @@ body{
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
+  padding-left: 215px;
 }
 
 .hotel h1{
