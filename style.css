@@ -3,30 +3,29 @@
 
 /*-------------- Общие свойства----------------- */
 :root{
---item-color: #81B3D2;
---black-font:#000000;
---white-font: #FFFFFF;
---selection-color: #81B3D2;
---features-gray: #EEEEEE;
+  --item-color: #81B3D2;
+  --black-font:#000000;
+  --white-font: #FFFFFF;
+  --selection-color: #81B3D2;
+  --features-gray: #EEEEEE;
+  --footer-color: rgba(255, 255, 255, 0.9);
 }
 body{
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
-  min-width: 960px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-color: var(--features-gray);
 }
 .site-navigation{
   list-style: none;
 }
-.page{
-  height:100%;
-
+.container{
+  min-width: 1200px;
 }
 .page-body{
-  min-height:100%;
+  min-width: 1200px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -37,28 +36,42 @@ body{
   justify-content: space-around;
 }
 .menu{
+  min-width: 1200px;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
   color: var(--black-font);
+  background-color: var(--white-font);
 }
 .menu a{
   color: var(--black-font);
   text-decoration: none;
 }
+.contacts{
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
 .contacts a{
+  display: flex;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  color:var(--black-font);
+  color: var(--black-font);
   text-decoration: none;
+  padding: 0px 100px;
+}
+.academy{
+  display: flex;
+  justify-content: center;
 }
 .academy span{
+  padding: 0px 10px;
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
@@ -66,37 +79,36 @@ body{
   text-transform: uppercase;
 }
 .main-footer{
+  min-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 60px 0;
-  margin-top: 65px;
+  background-color: var(--footer-color);
 }
 .social{
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   list-style-type: none;
 
 }
-.contacts{
-  display: flex;
-  justify-content: center;
-}
-.academy{
-  display: flex;
-  justify-content: center;
-}
 /*----------------Свойства для index---------------*/
 .begin{
- background-image: url(img/background-photo.png);
- background-repeat: no-repeat;
 }
-.descr{
+.mainpic{
+  display: flex;
+  justify-content: center;
+  background: url(img/background-photo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.description{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.descr h1{
+.description h1{
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -104,7 +116,7 @@ body{
   color: var(--black-font);
   text-align: center;
 }
-.descr p{
+.description p{
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
@@ -117,8 +129,11 @@ body{
   padding: 0;
 }
 .reasons-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--item-color);
-  text-align:center;
+  text-align: center;
 }
 .reasons-item h3{
   font-weight: bold;
@@ -133,6 +148,13 @@ body{
   color: var(--white-font);
   font-size: 14px;
   line-height: 21px;
+  padding: 0px 320px;
+}
+.reasons-image img{
+  margin: 0;
+  padding: 0;
+  min-width:100%;
+  min-height:100%;
 }
 .features{
   display: grid;
@@ -142,8 +164,8 @@ body{
   background-color: var(--features-gray);
 }
 .features-item{
-  justify-self: center;
-  text-align:center;
+  justify-content: center;
+  text-align: center;
 }
 .advantages{
   display: grid;
@@ -169,6 +191,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--white-font);
 }
 .interest h2{
   font-weight: bold;
@@ -213,6 +236,34 @@ body{
 /*--------------------Свойства для hotels-----------------*/
 .selection {
   background-color: var(--selection-color);
+  background-image: url(img/blur-photo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+.selection-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.housing{
+  display: flex;
+  flex-direction: row;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--white-font);
+}
+.infra{
+  display: flex;
+  flex-direction: column;
+  outline:2px solid blue;
+  padding-right: 100px;
+}
+.type{
+  display: flex;
+  flex-direction: column;
 }
 .selection-form h2{
   font-weight: bold;
@@ -223,13 +274,6 @@ body{
 }
 .selection-form ul{
   list-style-type: none;
-}
-.infra, .housing{
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: var(--white-font);
 }
 .price{
   color:var(--white-font);
