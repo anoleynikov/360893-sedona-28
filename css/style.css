@@ -13,13 +13,14 @@
 body{
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
-  min-width: 1200px;
-  margin: 0;
+  width: 1200px;
+  margin: 0 auto;
   padding: 0;
   background-color: var(--features-gray);
 }
 .container{
-  min-width: 1200px;
+  width: 1200px;
+  margin: 0 auto;
 }
 .page-body{
   min-width: 1200px;
@@ -27,7 +28,10 @@ body{
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
+/*---------------------------Меню----------------------*/
 .site-navigation{
+  padding: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -39,7 +43,6 @@ body{
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  text-align: center;
   text-transform: uppercase;
   color: var(--black-font);
   background-color: var(--white-font);
@@ -48,6 +51,7 @@ body{
   color: var(--black-font);
   text-decoration: none;
 }
+/*------------------------Футер-----------------------*/
 .contacts{
   display: flex;
   align-items: baseline;
@@ -78,7 +82,8 @@ body{
   text-transform: uppercase;
 }
 .main-footer{
-  min-width: 1200px;
+  width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 60px 0;
@@ -93,8 +98,6 @@ body{
 
 }
 /*----------------Свойства для index---------------*/
-.begin{
-}
 .mainpic{
   display: flex;
   justify-content: center;
@@ -122,8 +125,8 @@ body{
   text-align: center;
 }
 .reasons{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   margin: 0;
   padding: 0;
 }
@@ -133,6 +136,7 @@ body{
   justify-content: center;
   background-color: var(--item-color);
   text-align: center;
+  width:400px;
 }
 .reasons-item h3{
   font-weight: bold;
@@ -147,13 +151,13 @@ body{
   color: var(--white-font);
   font-size: 14px;
   line-height: 21px;
-  padding: 0px 320px;
 }
 .reasons-image img{
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  min-width:100%;
-  min-height:100%;
+  width: 800px;
 }
 .features{
   display: grid;
