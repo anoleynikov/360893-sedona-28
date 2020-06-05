@@ -13,7 +13,6 @@
 body{
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
-  width: 1200px;
   margin: 0 auto;
   padding: 0;
   background-color: var(--features-gray);
@@ -37,9 +36,29 @@ body{
   justify-content: space-around;
   list-style: none;
 }
+.site-navigation li{
+  width:240px;
+
+}
+.site-navigation li:first-child{
+  padding-left:72px;
+}
+.site-navigation li:last-child{
+  padding-right: 72px;
+  align-self: flex-end;
+}
+.site-navigation li:nth-child(2){
+  align-self:: center;
+}
+.site-navigation li:nth-child(3){
+    align-self:: center;
+    margin-left: 240px;
+}
 .menu{
+  text-align: center;
   padding: 0;
-  min-width: 1200px;
+  margin: 0 auto;
+  width: 1200px;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
@@ -51,6 +70,7 @@ body{
   color: var(--black-font);
   text-decoration: none;
 }
+
 /*------------------------Футер-----------------------*/
 .contacts{
   display: flex;
