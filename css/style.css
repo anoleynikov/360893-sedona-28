@@ -9,6 +9,13 @@
   --selection-color: #81B3D2;
   --features-gray: #EEEEEE;
   --footer-color: rgba(255, 255, 255, 0.9);
+  --hover-button: #669EC0;
+  --active-button: #5496BD;
+  --academy-gray: #BDBBBC;
+  --academy-black: #231f20;
+  --menu-item: #766357;
+  --button-book-hover: #604E43;
+  --button-book-active: #503E33;
 }
 body{
   font-family: "PT Sans", Arial, sans-serif;
@@ -35,10 +42,17 @@ body{
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
+  color: var(--black-font);
+  background-color: var(--white-font);
+}
+.site-navigation a{
+  display: block;
+  padding: 15px 15px;
+  color: var(--black-font);
+  text-decoration: none;
 }
 .site-navigation li{
-  width:240px;
-
+  width: 240px;
 }
 .site-navigation li:first-child{
   padding-left:72px;
@@ -54,6 +68,13 @@ body{
     align-self: center;
     margin-left: 240px;
 }
+.site-navigation a:hover{
+  color:var(--selection-color);
+}
+.site-navigation a:active{
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
 .menu{
   text-align: center;
   padding: 0;
@@ -63,22 +84,29 @@ body{
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-  color: var(--black-font);
-  background-color: var(--white-font);
 }
-.menu a{
-  color: var(--black-font);
-  text-decoration: none;
+.hotels-menu a, .hotels-menu a:hover, .hotels-menu a:active{
+  color: var(--menu-item);
 }
-
+.logo{
+  position: absolute;
+  left: 50%;
+  margin-left: -69px;
+}
+.mainpic svg{
+  margin: 80px 0px;
+}
 /*------------------------Футер-----------------------*/
 .contacts{
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .contacts a{
   display: flex;
+  flex-wrap: nowrap;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 21px;
@@ -87,11 +115,19 @@ body{
   text-transform: uppercase;
   color: var(--black-font);
   text-decoration: none;
-  padding: 0px 100px;
+  padding: 0px 90px;
 }
 .academy{
   display: flex;
+  align-items: center;
   justify-content: center;
+    fill: var(--academy-black);
+}
+.academy:hover path{
+  fill: var(--active-button);
+}
+.academy:active path{
+  fill: var(--academy-gray);
 }
 .academy span{
   padding: 0px 10px;
@@ -106,16 +142,51 @@ body{
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 60px 0;
+  padding: 30px 0;
   background-color: var(--footer-color);
 }
 .social{
-  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
-
+  color: inherit;
+}
+.social a:hover{
+  background-color: var(--hover-button);
+}
+.social a:active{
+  background-color: var(--active-button);
+}
+.social a:active path{
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.social a{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  background-color: var(--selection-color);
+}
+.social li{
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.visually-hidden{
+  position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
 }
 /*----------------Свойства для index---------------*/
 .mainpic{
@@ -129,6 +200,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 .description h1{
   font-weight: bold;
@@ -157,6 +229,7 @@ body{
   background-color: var(--item-color);
   text-align: center;
   width:400px;
+  padding: 50px;
 }
 .reasons-item h3{
   font-weight: bold;
@@ -215,8 +288,11 @@ body{
   flex-direction: column;
   justify-content: center;
   background-color: var(--white-font);
+  padding-top:58px;
+  padding-bottom:78px;
 }
 .interest h2{
+
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
@@ -231,7 +307,30 @@ body{
   text-align: center;
   text-transform: uppercase;
 }
+.booking{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -85px;
+  background-color: var(--white-font);
+   left:50%;
+   margin-left:-300px;
+}
+.booking-form{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 20px;
+}
+.booking-form div{
+  padding: 15px;
+}
 .booking h2{
+  margin: 0;
+  padding: 30px 184px;
+  background-color:var(--menu-item);
   font-weight: bold;
   font-size: 21px;
   text-align: center;
@@ -245,17 +344,41 @@ body{
   text-align: center;
   text-transform: uppercase;
 }
+.booking h2:hover{
+  background-color: var(--button-book-hover);
+}
+.booking h2:active{
+  background-color:var(--button-book-active);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
 .find {
+  align-self: center;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  background: #81B3D2;
+  padding:16px 160px;
+  background: var(--item-color);
   text-align: center;
   text-transform: uppercase;
   color: var(--white-font);
-  border: none;
+  border: 0;
 }
-
+.find:hover{
+  background-color: var(--hover-button);
+}
+.find:active{
+  background-color: var(--active-button);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.map{
+  position: relative;
+  height: 594px;
+  background-image: url(../img/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /*--------------------Свойства для hotels-----------------*/
 .selection {
   background-color: var(--selection-color);
@@ -327,22 +450,95 @@ body{
 .price input{
   padding-bottom: 32px;
 }
+.hotel{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  padding-left:0;
+  background: url(../img/line.png) repeat-x bottom center;
+}
 .hotel h1{
+  align-self:flex-start;
   font-weight: bold;
+  padding-left: 30px;
+  margin-top: 0px;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
 }
 .hotel a{
-  color: var(--black-font);
   text-decoration: none;
 }
 .hotel span{
+  margin-left: 30px;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
 }
+.hotel-inside{
+  display:flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.hotel-name {
+  color: var(--black-font);
+}
+.hotel-name:hover{
+  color: var(--selection-color);
+}
+.hotel-name:active{
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.finder{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-font);
+  padding: 5px;
+}
 .finder ul {
   list-style-type: none;
+}
+.button-more{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  padding:10px;
+  width:110px;
+  height:27px;
+  background-color:var(--selection-color);
+  color: var(--white-font);
+}
+.button-more:hover{
+  background-color: var(--hover-button);
+}
+.button-more:active{
+  background-color: var(--active-button);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.button-book{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  padding:10px;
+  width:110px;
+  height:27px;
+  background-color:var(--menu-item);
+  color: var(--white-font);
+}
+.button-book:hover{
+  background-color: var(--button-book-hover);
+
+}
+.button-book:active{
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  background-color: var(--button-book-active);
 }
