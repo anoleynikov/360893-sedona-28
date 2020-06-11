@@ -138,12 +138,22 @@ body{
   text-transform: uppercase;
 }
 .main-footer{
+  z-index: 5;
+  width: 1200px;
+  margin:-120px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px 0;
+  background-color: var(--footer-color);
+}
+.hotels-footer{
   width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 30px 0;
   background-color: var(--footer-color);
+
 }
 .social{
   display: flex;
@@ -373,9 +383,11 @@ body{
   opacity: 0.3;
 }
 .map{
+  z-index: 0;
   position: relative;
   height: 594px;
   background-image: url(../img/map.png);
+  background-color: var(--features-gray);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -385,8 +397,9 @@ body{
   background-image: url(../img/blur-photo.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 27px;
-  padding-bottom:32px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  height:217px;
 }
 .selection-form{
   display: flex;
@@ -411,18 +424,43 @@ body{
 
 }
 .infra ul{
-  padding-left: 0;
+  padding-left: 30px;
 }
 .housing li{
-  padding:20px 0px;
+  padding:10px 0px;
 }
 .type{
   display: flex;
   flex-direction: column;
 }
 .type ul{
-  padding-left: 0;
+  padding-left: 30px;
 
+}
+/*chek-boxes*/
+.check-box{
+  position: absolute;
+  height: 23px;
+  width: 23px;
+  background-image: url(../img/checkbox-off.png);
+  margin-left : -40px;
+  cursor: pointer;
+
+}
+.check {
+  position: relative;
+  padding-left: 10px;
+}
+/*cheked check-boxes*/
+.form-check:checked + .check-box{
+  background-image: url(../img/checkbox-on.png);
+}
+/*disabled check-boxes*/
+.form-check:disabled + .check-box{
+  background-image: url(../img/checkbox-off-dis.png);
+}
+.form-check:checked:disabled + .check-box{
+  background-image: url(../img/checkbox-on-dis.png);
 }
 .selection-form h2{
   font-weight: bold;
@@ -434,56 +472,178 @@ body{
 .selection-form ul{
   list-style-type: none;
 }
+/*Фильтр с диапазоном*/
 .price{
   display: flex;
   flex-direction: column;
-
   color:var(--white-font);
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  padding-right: 72px;
+  padding-top: 10px;
+  padding-right:0;
 }
-.price h2{
-  padding-bottom: 10px;
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
-.price input{
-  padding-bottom: 32px;
+.range-filter {
+  width: 316px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.filter-item legend {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  text-transform: uppercase;
+}
+.range-controls {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 41px;
+  height: 80px;
+  background-color: none;
+  border-radius: 5px;
+  margin-bottom: -40px;
+  padding-top: 39px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background-color: var(--white-font);
+}
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 18px;
+}
+.range-controls .toggle-max {
+  left: 160px;
+}
+.price-controls {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid var(--white-font);
+  border-radius: 2px;
+}
+.price-controls label {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: var(--white-font);
+  border: none;
+  border-radius: 5px;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+.price-rectangle{
+  width: 2px;
+  height: 22px;
+  background-color: var(--white-font);
+  align-self: center;
+}
+.show-button{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  background:none;
+  border: 2px solid var(--white-font);
+  color:var(--white-font);
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 7px 35px;
+  align-self: center;
+  cursor: pointer;
+}
+.show-button:hover{
+  color:var(--black-font);
+  background-color:var(--white-font);
 }
 .hotel{
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background: url(../img/line.png) repeat-x bottom center;
+  height:150px;
+}
+.hotel-img{
+  align-self:center;
+}
+.hotel-info{
   display: flex;
   flex-direction: row;
+  margin-left: 30px;
+}
+.wrappers{
+  align-self: center;
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 30px;
-  padding-left:0;
-  background: url(../img/line.png) repeat-x bottom center;
+  flex-direction: row;
+}
+.hotel-wrapper-content{
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+.hotel-wrapper-button{
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-hotel-cart{
+
+
 }
 .hotel h1{
-  align-self:flex-start;
+  margin-top:20px;
+  width:100%;
   font-weight: bold;
-  padding-left: 30px;
-  margin-top: 0px;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
 }
 .hotel a{
   text-decoration: none;
+  text-transform: uppercase;
 }
 .hotel span{
-  margin-left: 30px;
+  margin-bottom: 10px;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
 }
-.hotel-inside{
-  display:flex;
-  flex-direction: column;
-  padding: 10px;
-}
+
 .hotel-name {
   color: var(--black-font);
 }
@@ -508,9 +668,8 @@ body{
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  padding:10px;
-  width:110px;
-  height:27px;
+  text-align: center;
+  padding:5px 17px;
   background-color:var(--selection-color);
   color: var(--white-font);
 }
@@ -523,13 +682,12 @@ body{
   opacity: 0.3;
 }
 .button-book{
+  padding:5px 17px;
+  text-align: center;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  padding:10px;
-  width:110px;
-  height:27px;
   background-color:var(--menu-item);
   color: var(--white-font);
 }
