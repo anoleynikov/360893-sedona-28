@@ -251,8 +251,7 @@ body{
   justify-content: center;
   background-color: var(--item-color);
   text-align: center;
-  width:400px;
-  padding: 50px;
+  max-width:400px;
 }
 .reasons-item h3{
   font-weight: bold;
@@ -260,6 +259,7 @@ body{
   color: var(--white-font);
   font-size: 21px;
   line-height: 21px;
+  padding: 0px 125px;
 }
 .reasons-item span, .reasons-item p {
   font-weight: normal;
@@ -285,6 +285,14 @@ body{
 .features-item{
   justify-content: center;
   text-align: center;
+  padding: 50px 0;
+}
+.features-item h3{
+  padding: 0px 150px;
+}
+.features-item p{
+  text-transform: uppercase;
+  padding: 0px 50px;
 }
 .advantages{
   display: grid;
@@ -361,7 +369,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  padding: 20px;
+  padding: 55px;
 }
 .booking-form div{
   margin-bottom: 30px;
@@ -369,18 +377,82 @@ body{
 .arriving-form{
   display: flex;
   align-items: center;
+  position: relative;
 
 }
 .departure-form{
   display: flex;
   align-items: center;
-
+  position: relative;
 }
 .countig-form{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.calendar-icon{
+  position: absolute;
+  right: 9px;
+  top: 9px;
+}
+.calendar-icon path{
+  fill:#A9A9A9;
+}
+.calendar-icon:hover path{
+  fill: var(--black-font);
+}
+.calendar-icon:active path{
+  fill: var(--item-color);
+}
+.plus-icon-adults{
+  position: absolute;
+  left: 230px;
+  top: 1px;
+}
+.minus-icon-adults{
+  left: 150px;
+  top:-2px;
+  position: absolute;
+}
+.plus-icon-children{
+  position: absolute;
+  left: 150px;
+  top: 1px;
+}
+.minus-icon-children{
+  left: 70px;
+  top:-2px;
+  position: absolute;
+}
+.adults-label ,.children-label{
+  position: relative;
+}
+.counting-icons path, .counting-icons rect {
+  fill:#A9A9A9;
+}
+.counting-icons:hover path,.counting-icons:hover rect {
+  fill: var(--black-font);
+}
+.counting-icons:active path, .counting-icons:active rect{
+  fill:var(--item-color);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .date-in{
   width: 346px;
@@ -759,10 +831,10 @@ body{
 }
 
 .wrappers{
-  align-self: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-content: center;
 }
 .hotel-wrapper-content{
   display: flex;
@@ -779,13 +851,15 @@ body{
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  margin: 0;
+  margin-top: -10px;
 }
 .hotel a{
   text-decoration: none;
   text-transform: uppercase;
 }
 .hotel span{
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
