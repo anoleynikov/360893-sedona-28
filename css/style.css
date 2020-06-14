@@ -71,8 +71,6 @@ body{
   background-color: var(--white-font);
 }
 .site-navigation a{
-  display: block;
-  padding: 15px 15px;
   color: var(--black-font);
   text-decoration: none;
 }
@@ -80,7 +78,7 @@ body{
   width: 240px;
 }
 .site-navigation li:first-child{
-  padding-left:72px;
+  padding-left: 72px;
 }
 .site-navigation li:last-child{
   padding-right: 72px;
@@ -105,10 +103,16 @@ body{
   padding: 0;
   margin: 0 auto;
   width: 1200px;
+  height: 56px;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
+  position: relative;
+  background-color: var(--white-font);
+}
+.main-navigation{
+  padding: 15px 0;
 }
 .hotels-menu a, .hotels-menu a:hover, .hotels-menu a:active{
   color: var(--menu-item);
