@@ -398,6 +398,12 @@ body{
 .booking-form div{
   margin-bottom: 30px;
 }
+.booking-form-show{
+  display:flex;
+}
+.booking-hidden{
+  display: none;
+}
 .arriving-form{
   display: flex;
   align-items: center;
@@ -487,7 +493,7 @@ body{
 .children{
   margin-left: 10px;
 }
-.booking h2{
+.booking-open{
   margin: 0;
   padding: 30px 184px;
   background-color:var(--menu-item);
@@ -497,6 +503,7 @@ body{
   text-transform: uppercase;
   line-height: 26px;
   color: var(--white-font);
+  border: none;
 }
 .booking, input[name="arriving"], input[name="departure"], input[name="adult"], input[name="child"]{
   font-weight: bold;
@@ -504,11 +511,13 @@ body{
   text-align: center;
   text-transform: uppercase;
 }
-.booking h2:hover{
+.booking-open:hover{
   background-color: var(--button-book-hover);
 }
-.booking h2:active{
+.booking-open:active{
   background-color:var(--button-book-active);
+}
+.booking-open:active span{
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -529,6 +538,10 @@ body{
 }
 .find:active{
   background-color: var(--active-button);
+}
+.find span{
+}
+.find:active span{
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -893,20 +906,21 @@ body{
   display: flex;
   flex-direction: column;
   background-color: var(--white-font);
-
 }
 .finder ul {
   list-style-type: none;
   margin:0;
 }
 .button-more{
+  padding:5px 17px;
+  background-color:var(--selection-color);
+}
+.button-more span{
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  padding:5px 17px;
-  background-color:var(--selection-color);
   color: var(--white-font);
 }
 .button-more:hover{
@@ -914,25 +928,30 @@ body{
 }
 .button-more:active{
   background-color: var(--active-button);
+}
+.button-more:active span{
   mix-blend-mode: normal;
   opacity: 0.3;
 }
 .button-book{
   padding:5px 17px;
+  background-color:var(--menu-item);
+}
+.button-book span{
   text-align: center;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  background-color:var(--menu-item);
   color: var(--white-font);
 }
 .button-book:hover{
   background-color: var(--button-book-hover);
-
 }
 .button-book:active{
   mix-blend-mode: normal;
+}
+.button-book:active span{
   opacity: 0.3;
   background-color: var(--button-book-active);
 }

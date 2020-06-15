@@ -141,8 +141,8 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418981.9277067821!2d-111.97642682685304!3d34.873904947678156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1591698209792!5m2!1sru!2sru"
         width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       <div class="booking">
-        <h2>Поиск гостиницы в Седоне</h2>
-        <form class="booking-form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <button type="button" class="booking-open"><span>Поиск гостиницы в Седоне</span></button>
+        <form class="booking-hidden" action="https://echo.htmlacademy.ru/courses" method="post">
           <div class="arriving-form">
             <label for="arr">Дата заезда:</label>
             <input type="text" class="date-in arriving-date-in" name="arriving" id="arr" value="24 апреля 2017">
@@ -170,7 +170,7 @@
             <input type="number" class="quantity children" name="child" id="ch" value="Дети">
 
           </div>
-          <button class="find" type="submit" name="find" value="Найти">Найти</button>
+          <button class="find" type="submit" name="find" value="Найти"><span>Найти</span></button>
         </form>
       </div>
     </section>
@@ -183,7 +183,7 @@
     </div>
     <ul class="social">
       <li>
-        <a href="#">
+        <a class="social-icons" href="#">
           <span class="visually-hidden">Твиттер</span>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
             <path fill="#FFF"
@@ -192,7 +192,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a class="social-icons" href="#">
           <span class="visually-hidden">Фейсбук</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
             <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
@@ -200,7 +200,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a class="social-icons" href="#">
           <span class="visually-hidden">Ютюб</span>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
             <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z" />
@@ -220,6 +220,7 @@
       </a>
     </div>
   </footer>
+  <script src="js\booking.js"></script>
 </body>
 
 </html>
