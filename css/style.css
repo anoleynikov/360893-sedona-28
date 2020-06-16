@@ -275,7 +275,7 @@ body{
   justify-content: center;
   background-color: var(--item-color);
   text-align: center;
-  max-width:400px;
+  max-width: 400px;
 }
 .reasons-item h3{
   font-weight: bold;
@@ -283,7 +283,7 @@ body{
   color: var(--white-font);
   font-size: 21px;
   line-height: 21px;
-  padding: 0px 125px;
+  padding: 0px 90px;
 }
 .reasons-item span, .reasons-item p {
   font-weight: normal;
@@ -291,6 +291,9 @@ body{
   color: var(--white-font);
   font-size: 14px;
   line-height: 21px;
+}
+.reasons-item p{
+  padding: 0 40px;
 }
 .reasons-image img{
   display: flex;
@@ -318,6 +321,10 @@ body{
   text-transform: uppercase;
   padding: 0px 50px;
 }
+.features-item:last-child p{
+  text-transform: uppercase;
+  padding: 0px 55px;
+}
 .advantages{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -325,13 +332,23 @@ body{
   padding: 0;
   background-color: var(--white-font)
 }
-.advantages-item{
+.advantages-item:first-child{
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px 70px;
-
-
+}
+.advantages-item:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 50px;
+}
+.advantages-item:last-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 50px;
 }
 .advantages-item h3{
   font-weight: bold;
@@ -339,9 +356,7 @@ body{
   line-height: 21px;
   text-align: center;
   margin-top: 30px;
-
 }
-
 .advantages-item p{
   font-size: 14px;
   text-align: center;
@@ -359,8 +374,7 @@ body{
   flex-direction: column;
   justify-content: center;
   background-color: var(--white-font);
-  padding-top:58px;
-  padding-bottom:78px;
+  padding: 78px 0px 120px 0;
 }
 .interest h2{
   font-weight: bold;
@@ -376,6 +390,7 @@ body{
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  padding: 0 390px;
 }
 .booking{
   display:flex;
@@ -386,7 +401,7 @@ body{
   top: -85px;
   background-color: var(--white-font);
   left:50%;
-  margin-left:-300px;
+  margin-left:-340px;
 }
 
 .booking-form{
@@ -891,7 +906,6 @@ body{
   line-height: 21px;
   text-transform: uppercase;
 }
-
 .hotel-name {
   color: var(--black-font);
 }
@@ -954,4 +968,23 @@ body{
 .button-book:active span{
   opacity: 0.3;
   background-color: var(--button-book-active);
+}
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
