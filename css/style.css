@@ -129,7 +129,7 @@ body{
   z-index: 1;
 }
 .mainpic svg{
-  margin: 77px 0px;
+  margin: 77px 0px 80px 0px;
 }
 /*------------------------Футер-----------------------*/
 .contacts{
@@ -139,7 +139,7 @@ body{
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 70px;
-  margin-top: -3px;
+  margin-top: -12px;
 }
 .contacts a{
   display: flex;
@@ -161,7 +161,7 @@ body{
   align-items: center;
   justify-content: center;
   fill: var(--academy-black);
-  margin-top: 14px;
+  margin-top: 9px;
   margin-right: 83px;
 }
 .academy:hover path{
@@ -184,8 +184,24 @@ body{
   margin:-120px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 30px 0;
+  padding: 20px 0;
   background-color: var(--footer-color);
+}
+.main-footer ul{
+  margin:0;
+  margin-top: 10px;
+  margin-left: 6px;
+  padding: 0;
+}
+.main-footer .contacts{
+  margin-top: -20px;
+}
+.main-footer .social{
+  margin-top: -3px;
+}
+.main-footer .academy{
+  margin-left: 1px;
+  margin-top: -4px;
 }
 .hotels-footer{
   width: 1200px;
@@ -205,7 +221,7 @@ body{
 }
 .hotels-footer ul{
   margin:0;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 6px;
   padding: 0;
 }
@@ -257,7 +273,7 @@ body{
   flex-direction: column;
   justify-content: center;
   background-color: var(--white-font);
-  padding: 35px 300px;
+  padding: 32px 300px;
   position: relative;
 }
 .description svg{
@@ -272,14 +288,17 @@ body{
   text-transform: uppercase;
   color: var(--black-font);
   text-align: center;
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 44px;
+  margin-top: 10px;
 }
 .description p{
-
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  margin-bottom: 22px;
 }
 .reasons{
   display: flex;
@@ -959,7 +978,7 @@ body{
   flex-wrap: wrap;
   background: url(../img/line.png) repeat-x bottom center;
   height: 150px;
-  padding: 0px 53px 0px 73px;
+  padding: 0px 53px 2px 73px;
 }
 .hotel-img{
   margin-top: 7px;
@@ -978,10 +997,6 @@ body{
   padding-top: 28px;
   align-items: flex-end;
   justify-content: space-between;
-}
-.rating-stars-list{
-}
-.rating-catalog-cart .rating-text{
 }
 .rating-stars-list li{
   margin-right: 5px;
