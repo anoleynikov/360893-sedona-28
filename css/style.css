@@ -668,7 +668,7 @@ body{
   display: flex;
   flex-direction: row;
 }
-.find-config li{
+.find-config-price, .find-config-type, .find-config-rating {
   margin-left: 32px;
   font-style: normal;
   font-weight: normal;
@@ -678,13 +678,16 @@ body{
   text-transform: uppercase;
   mix-blend-mode: normal;
   opacity: 0.3;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--item-color);
 }
-.find-config li:hover{
+.find-config-price:hover, .find-config-type:hover, .find-config-rating:hover{
   text-decoration: underline;
   text-decoration-style: dashed;
   color: var(--item-color);
 }
-.find-config li:active{
+.find-config-price:active, .find-config-type:active, .find-config-rating:active{
   color:var(--black-font);
   text-decoration: none;
   opacity: 1;
@@ -708,11 +711,15 @@ body{
   text-transform: uppercase;
 }
 .find-config-price{
-  margin-left: 8px;
+  margin-left: 40px;
+}
+.find-config-type{
+  margin-left: 32px;
 }
 .find-config-rating{
-  margin-left: 1px;
+  margin-left: 34px;
 }
+
 .arrows{
   padding-top: 10px;
   margin-right: 0;
