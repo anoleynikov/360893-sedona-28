@@ -21,6 +21,7 @@
   --icon-color: #A9A9A9;
   --scale-color: #FFFFFF ;
   --background-toggle: #ababab;
+  --find-active: rgba(255, 255, 255, 0.3);
 }
 /*-------------- Общие свойства----------------- */
 body{
@@ -610,11 +611,9 @@ body{
 }
 .booking-open:active{
   background-color:var(--button-book-active);
+  color: var(--find-active);
 }
-.booking-open:active span{
-  mix-blend-mode: normal;
-  opacity: 0.3;
-}
+
 .find {
   margin-bottom: 3px;
   margin-top: 21px;
@@ -633,11 +632,8 @@ body{
   background-color: var(--hover-button);
 }
 .find:active{
+  color: var(--find-active);
   background-color: var(--active-button);
-}
-.find:active span{
-  mix-blend-mode: normal;
-  opacity: 0.3;
 }
 .map{
   z-index: 0;
@@ -1063,8 +1059,6 @@ body{
   margin-top: 5px;
   padding: 3px 17px;
   background-color:var(--selection-color);
-}
-.button-more span{
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -1078,16 +1072,13 @@ body{
 .button-more:active{
   background-color: var(--active-button);
 }
-.button-more:active span{
-  mix-blend-mode: normal;
-  opacity: 0.3;
+.button-more:active{
+  color: var(--find-active);
 }
 .button-book{
   margin-top: 5px;
   padding: 3px 17px;
   background-color:var(--menu-item);
-}
-.button-book span{
   text-align: center;
   font-style: normal;
   font-weight: bold;
@@ -1099,12 +1090,10 @@ body{
   background-color: var(--button-book-hover);
 }
 .button-book:active{
-  mix-blend-mode: normal;
-}
-.button-book:active span{
-  opacity: 0.3;
   background-color: var(--button-book-active);
+  color: var(--find-active);
 }
+
 /* Animations */
 
 @keyframes bounce {
