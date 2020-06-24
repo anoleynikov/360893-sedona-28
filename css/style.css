@@ -78,8 +78,6 @@ body{
   color: var(--black-font);
   text-decoration: none;
 }
-.site-navigation li{
-}
 .site-navigation li:first-child{
   padding-left: 72px;
   width: 240px;
@@ -92,11 +90,13 @@ body{
 .site-navigation li:nth-child(2){
   min-width: 240px;
   text-align: center;
+  padding-left: 9px;
 }
 .site-navigation li:nth-child(3){
   min-width: 240px;
   text-align: center;
   margin-left: 240px;
+  padding-left: 29px;
 }
 .site-navigation a:hover{
   color:var(--selection-color);
