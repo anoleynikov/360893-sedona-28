@@ -597,7 +597,6 @@ body{
 .date-in:active{
   background-color: var(--date-in-active);
   border: 2px solid var(--date-in-border);
-  box-sizing: border-box;
 }
 .quantity{
   background-color: var(--rating-text);

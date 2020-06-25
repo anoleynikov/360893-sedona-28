@@ -17,8 +17,8 @@ try {
 }
 
 bookingButton.onclick = function(){
-  bookingSpace.classList.toggle('booking-form');
-  bookingSpace.classList.toggle('booking-hidden');
+  bookingForm.classList.toggle('booking-hidden');
+  bookingForm.classList.toggle('booking-form');
 };
 
 
