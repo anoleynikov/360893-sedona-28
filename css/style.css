@@ -517,7 +517,7 @@ body{
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  margin-left: 2px;
+  margin-left: 0px;
   margin-top: -1px;
 }
 .departure-form{
@@ -557,11 +557,11 @@ body{
 }
 .plus-icon-children{
   position: absolute;
-  left: 156px;
+  left: 155px;
   top: -4px;
 }
 .minus-icon-children{
-  left: 81px;
+  left: 79px;
   top: -7px;
   position: absolute;
 }
@@ -635,7 +635,7 @@ body{
 .arriving-date-in, .departure-date-in{
   text-align: left;
   padding-top: 0px;
-  padding-left: 13px;
+  padding-left: 12px;
   padding-right: 174px;
   font-weight: bold;
   font-size: 14px;
@@ -652,7 +652,7 @@ body{
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  margin-left: 1px;
+  margin-left: 0px;
   margin-top: -1px;
 }
 .counting-form label{
@@ -662,7 +662,7 @@ body{
   line-height: 26px;
 }
 .counting-form .adults-label{
-  margin-left: 2px;
+  margin-left: -1px;
   margin-right: 27px;
 }
 .booking-open:hover{
