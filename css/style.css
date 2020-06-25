@@ -134,7 +134,7 @@ body{
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 70px;
-  margin-top: -12px;
+  margin-top: -6px;
 }
 .contacts a{
   display: flex;
@@ -216,7 +216,7 @@ body{
 }
 .hotels-footer ul{
   margin:0;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-left: 6px;
   padding: 0;
 }
@@ -890,6 +890,8 @@ input[name="adult"]{
   line-height: 21px;
   align-items: center;
   text-transform: uppercase;
+  padding-top: 2px;
+  margin-top:0;
 }
 .range-controls {
   position: relative;
@@ -995,7 +997,7 @@ input[name="adult"]{
   border-radius: 2px;
   text-transform: uppercase;
   padding: 7px 35px;
-  margin-top: 59px;
+  margin-top: 57px;
   margin-right: 11px;
   align-self: center;
   cursor: pointer;
@@ -1010,7 +1012,7 @@ input[name="adult"]{
   flex-wrap: wrap;
   background: url(../img/line.png) repeat-x bottom center;
   height: 150px;
-  padding: 0px 53px 2px 73px;
+  padding: 0px 53px 1px 73px;
 }
 .hotel-img{
   margin-top: 7px;
@@ -1020,6 +1022,9 @@ input[name="adult"]{
   display: flex;
   flex-direction: row;
   margin-left: 30px;
+}
+.hotel:nth-of-type(3) .hotel-info{
+
 }
 .rating-catalog-cart{
   display: flex;
@@ -1109,6 +1114,7 @@ input[name="adult"]{
   margin:0;
   padding: 0;
 }
+
 .button-more{
   margin-top: 5px;
   padding: 3px 17px;
