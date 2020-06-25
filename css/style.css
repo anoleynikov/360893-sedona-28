@@ -503,10 +503,10 @@ body{
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  padding: 52px 42px;
+  padding: 55px 0px;
 }
 .booking-form div{
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 .booking-form-show{
   display:flex;
@@ -523,6 +523,8 @@ body{
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
+  margin-left: 2px;
+  margin-top: -1px;
 }
 .departure-form{
   display: flex;
@@ -551,26 +553,30 @@ body{
 }
 .plus-icon-adults{
   position: absolute;
-  left: 230px;
-  top: 1px;
+  left: 201px;
+  top: -3px;
 }
 .minus-icon-adults{
-  left: 150px;
-  top:-2px;
+  left: 125px;
+  top: -7px;
   position: absolute;
 }
 .plus-icon-children{
   position: absolute;
-  left: 150px;
-  top: 1px;
+  left: 156px;
+  top: -4px;
 }
 .minus-icon-children{
-  left: 70px;
-  top:-2px;
+  left: 81px;
+  top: -7px;
   position: absolute;
 }
 .adults-label ,.children-label{
   position: relative;
+}
+.children-label{
+  margin-left: 0px;
+
 }
 .counting-icons path, .counting-icons rect {
   fill:var(--icon-color);
@@ -582,30 +588,30 @@ body{
   fill:var(--item-color);
 }
 .date-in{
-  width: 346px;
   height: 38px;
   background-color: var(--rating-text);
   border: none;
 }
 .arriving-date-in{
-  margin-left: 34px;
+  margin-left: 23px;
 }
 .departure-date-in{
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .quantity{
   background-color: var(--rating-text);
   border: none;
-  width: 114px;
+  width: 109px;
   height: 38px;
   text-align: center;
 }
 .adult{
-  margin-left: 50px;
+  margin-left: 10px;
   margin-right: 50px;
 }
 .children{
-  margin-left: 10px;
+  margin-left: 27px;
+  margin-right: 0px;
 }
 .booking-open{
   margin: 0;
@@ -625,6 +631,42 @@ body{
   text-align: center;
   text-transform: uppercase;
 }
+input[name="arriving"], input[name="departure"]{
+  text-align: left;
+  padding-top: 0px;
+  padding-left: 13px;
+  padding-right: 174px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+input[name="departure"]{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+input[name="adult"]{
+  padding-right: 0px;
+}
+.departure-form label{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  margin-left: 1px;
+  margin-top: -1px;
+}
+.counting-form label{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+.counting-form .adults-label{
+  margin-left: 2px;
+  margin-right: 27px;
+}
 .booking-open:hover{
   background-color: var(--button-book-hover);
 }
@@ -634,8 +676,8 @@ body{
 }
 
 .find {
-  margin-bottom: 3px;
-  margin-top: 21px;
+  margin-bottom: 0px;
+  margin-top: 26px;
   align-self: center;
   font-weight: bold;
   font-size: 21px;
