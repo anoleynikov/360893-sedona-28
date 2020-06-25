@@ -22,6 +22,9 @@
   --scale-color: #FFFFFF ;
   --background-toggle: #ababab;
   --find-active: rgba(255, 255, 255, 0.3);
+  --date-in-hover: #EBEBEB;
+  --date-in-active: #FFFFFF;
+  --date-in-border: #E5E5E5;
 }
 /*-------------- Общие свойства----------------- */
 body{
@@ -587,6 +590,14 @@ body{
 }
 .departure-date-in{
   margin-left: 20px;
+}
+.date-in:hover{
+  background-color: var(--date-in-hover);
+}
+.date-in:active{
+  background-color: var(--date-in-active);
+  border: 2px solid var(--date-in-border);
+  box-sizing: border-box;
 }
 .quantity{
   background-color: var(--rating-text);
