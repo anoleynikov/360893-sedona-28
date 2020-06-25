@@ -719,7 +719,7 @@ input[name="adult"]{
   display: flex;
   flex-direction: row;
 }
-.find-config-price, .find-config-type, .find-config-rating {
+.find-config-type, .find-config-rating {
   margin-left: 32px;
   font-style: normal;
   font-weight: normal;
@@ -729,19 +729,19 @@ input[name="adult"]{
   text-transform: uppercase;
   mix-blend-mode: normal;
   opacity: 0.3;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-color: var(--item-color);
+  border-bottom:  1px dashed var(--item-color);
+  text-decoration: none;
 }
-.find-config-price:hover, .find-config-type:hover, .find-config-rating:hover{
-  text-decoration: underline;
-  text-decoration-style: dashed;
+.find-config-type:hover, .find-config-rating:hover{
+  border-bottom:  1px dashed var(--item-color);
   color: var(--item-color);
+  text-decoration: none;
 }
-.find-config-price:active, .find-config-type:active, .find-config-rating:active{
-  color:var(--black-font);
+.find-config-type:active, .find-config-rating:active{
+  color: var(--black-font);
   text-decoration: none;
   opacity: 1;
+  border: none;
 }
 .find-config span{
   margin-left: 47px;
@@ -763,6 +763,15 @@ input[name="adult"]{
 }
 .find-config-price{
   margin-left: 40px;
+  color: var(--item-color);
+  margin-left: 32px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .find-config-type{
   margin-left: 32px;
@@ -775,18 +784,22 @@ input[name="adult"]{
   padding-top: 10px;
   margin-right: 0;
   margin-left: auto;
+  cursor: pointer;
 }
 .arrows li{
   margin-left: 12px;
 }
-.arrows-left path, .arrows-right path{
+.arrows-left path{
   fill:var(--arrows);
 }
-.arrows-left:hover path, .arrows-right:hover path {
+.arrows-left:hover path{
   fill:var(--arrows-hover);
 }
-.arrows-left:active path, .arrows-right:active path{
+.arrows-left:active path{
   fill:var(--arrows-active);
+}
+.arrows-right path{
+  fill: var(--item-color);
 }
 .housing{
   display: flex;
@@ -1023,7 +1036,7 @@ input[name="adult"]{
   flex-direction: row;
   margin-left: 30px;
 }
-.hotel:nth-of-type(3) .hotel-info{
+.hotel:last-of-type .hotel-info{
 
 }
 .rating-catalog-cart{
