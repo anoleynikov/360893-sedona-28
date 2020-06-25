@@ -611,7 +611,7 @@ body{
   margin-right: 50px;
 }
 .children{
-  margin-left: 27px;
+  margin-left: 24px;
   margin-right: 0px;
 }
 .booking-open{
@@ -626,13 +626,13 @@ body{
   color: var(--white-font);
   border: none;
 }
-.booking, input[name="arriving"], input[name="departure"], input[name="adult"], input[name="child"]{
+.booking, .arriving-date-in, .departure-date-in, .adult, .children{
   font-weight: bold;
   color: var(--black-font);
   text-align: center;
   text-transform: uppercase;
 }
-input[name="arriving"], input[name="departure"]{
+.arriving-date-in, .departure-date-in{
   text-align: left;
   padding-top: 0px;
   padding-left: 13px;
@@ -641,14 +641,11 @@ input[name="arriving"], input[name="departure"]{
   font-size: 14px;
   line-height: 26px;
 }
-input[name="departure"]{
+.departure-form .departure-date-in{
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-}
-input[name="adult"]{
-  padding-right: 0px;
 }
 .departure-form label{
   font-style: normal;
