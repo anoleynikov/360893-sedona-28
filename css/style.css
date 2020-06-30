@@ -498,6 +498,7 @@ body{
   flex-direction: column;
   align-items: baseline;
   padding: 55px 0px;
+  animation: bounce 0.6s;
 }
 .booking-form div{
   margin-bottom: 28px;
@@ -1176,10 +1177,9 @@ body{
 }
 
 /* Animations */
-
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    transform: translateY(0px);
   }
 
   70% {

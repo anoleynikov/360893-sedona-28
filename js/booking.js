@@ -11,7 +11,7 @@ var isStorageSupport = true;
 var storage = "";
 
 try {
-  storage = localStorage.getItem("login");
+  storage = localStorage.getItem("quantity-person");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -21,16 +21,13 @@ bookingButton.onclick = function(){
   bookingForm.classList.toggle('booking-form');
 };
 
-
-bookingForm.addEventListener("submit", function (evt) {
-   if (!arrivingDate.value || !departureDate.value||quantityAdult.value||quantityChildren.value) {
+bookingForm.addEventListener("submit", function (evt){
+  if(!quantityAdult){
     evt.preventDefault();
   } else {
-    localStorage.setItem("arriving", arrivingDate.value);
-    localStorage.setItem("departure", departureDate.value);
-    localStorage.setItem("adults", quantityAdult.value);
-    localStorage.setItem("children", quantityChildren.value);
-
+     if (isStorageSupport) {
+    localStorage.setItem("quantity-person", quantityAdult.value);
+    }
   }
 });
 
@@ -39,6 +36,7 @@ window.addEventListener("keydown", function (evt) {
     if (bookingForm.classList.contains("booking-form")) {
       evt.preventDefault();
       bookingForm.classList.remove("booking-form");
+      bookingForm.classList.add('booking-hidden');
     }
   }
 });
