@@ -1176,7 +1176,7 @@ body{
   color: var(--find-active);
 }
 
-iframe{
+.index-maps{
   frameborder: 0;
 }
 /* Animations */
