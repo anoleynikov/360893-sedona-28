@@ -1176,6 +1176,9 @@ body{
   color: var(--find-active);
 }
 
+iframe{
+  frameborder: 0;
+}
 /* Animations */
 @keyframes bounce {
   0% {
