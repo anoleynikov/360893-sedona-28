@@ -41,7 +41,7 @@
   </header>
   <main class="container">
     <section class="selection">
-      <div class="selection-form">
+      <form method="get" action="https://echo.htmlacademy.ru" class="selection-form">
         <div class="housing">
           <div class="infra">
             <h2>Инфраструктура:</h2>
@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="price">
-          <form method="get" action="https://echo.htmlacademy.ru" class="range-filter-form">
+          <div class="range-filter-form">
             <fieldset class="filter-item">
               <legend>Стоимость в сутки (Р):</legend>
               <div class="range-filter">
@@ -75,15 +75,15 @@
                 <div class="range-controls">
                   <div class="scale"></div>
                   <div class="bar"></div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <div class="toggle toggle-min" tabindex="0"><span class="visually-hidden">Минимальный порог цены</span></div>
+                  <div class="toggle toggle-max" tabindex="0">><span class="visually-hidden">Максимальный порог цены</span></div>
                 </div>
                 <input class="show-button" type="submit" name="show" value="Показать">
               </div>
             </fieldset>
-          </form>
         </div>
       </div>
+      </form>
     </section>
     <section class="finder">
       <ul class="finder-stucture">
