@@ -70,6 +70,7 @@ body{
   padding: 0px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
   color: var(--black-font);
@@ -598,7 +599,7 @@ body{
 .date-in{
   height: 38px;
   background-color: var(--rating-text);
-  border: none;
+  border: 2px solid var(--rating-text);
 }
 .arriving-date-in{
   margin-left: 23px;
@@ -608,10 +609,11 @@ body{
 }
 .date-in:hover{
   background-color: var(--date-in-hover);
+  border: 2px solid var(--date-in-hover);
 }
-.date-in:active{
+.date-in:focus{
   background-color: var(--date-in-active);
-  border: 2px solid var(--date-in-border);
+  border: 2px solid var(--date-in-active);
 }
 .quantity{
   background-color: var(--rating-text);
