@@ -79,24 +79,29 @@ body{
   text-decoration: none;
 }
 .site-navigation li:first-child{
+  box-sizing: border-box;
   padding-left: 72px;
   width: 240px;
+  text-align: left;
 }
 .site-navigation li:last-child{
+  box-sizing: border-box;
   text-align: right;
   padding-right: 72px;
   width: 240px;
 }
 .site-navigation li:nth-child(2){
-  min-width: 240px;
+  box-sizing: border-box;
+  width: 240px;
   text-align: center;
-  padding-left: 9px;
+  padding-right: 22px;
 }
 .site-navigation li:nth-child(3){
-  min-width: 240px;
+  box-sizing: border-box;
+  width: 240px;
   text-align: center;
   margin-left: 240px;
-  padding-left: 29px;
+  padding-left: 37px;
 }
 .site-navigation a:hover{
   color:var(--selection-color);
