@@ -25,6 +25,7 @@
   --date-in-hover: #EBEBEB;
   --date-in-active: #FFFFFF;
   --date-in-border: #E5E5E5;
+   --back-color:  #92afb3;
 }
 /*-------------- Общие свойства----------------- */
 body{
@@ -264,6 +265,7 @@ body{
   display: flex;
   justify-content: center;
   background: url(../img/background-photo.png);
+  background-color: var(--back-color);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -364,6 +366,9 @@ body{
 }
 .reasons-item p{
   margin: 0;
+}
+.reasons-image{
+  background-color: var(--back-color);
 }
 .reasons-image img{
   display: flex;
