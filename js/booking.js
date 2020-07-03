@@ -28,7 +28,6 @@ bookingForm.addEventListener("submit", function (evt){
     bookingForm.classList.remove("booking-error");
     bookingForm.offsetWidth = bookingForm.offsetWidth;
     bookingForm.classList.add("booking-error");
-    alert("Введите данные для поиска");
   } else {
      if (isStorageSupport) {
     localStorage.setItem("quantity-person", quantityAdult.value);
