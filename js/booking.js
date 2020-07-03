@@ -1,11 +1,12 @@
 let bookingSpace = document.querySelector(".booking-hidden");
 let bookingButton = document.querySelector(".booking-open");
 let bookingForm = document.querySelector(".booking-form");
+let bookingFind = document.querySelector(".find");
 
-let arrivingDate = document.querySelector(".arriving-date-in");
-let departureDate= document.querySelector(".departure-date-in");
-let quantityAdult = document.querySelector(".adult");
-let quantityChildren = document.querySelector(".children");
+var arrivingDate = bookingForm.querySelector(".arriving-date-in");
+var departureDate= bookingForm.querySelector(".departure-date-in");
+var quantityAdult = bookingForm.querySelector(".adult");
+var quantityChildren = bookingForm.querySelector(".children");
 
 var isStorageSupport = true;
 var storage = "";
@@ -22,8 +23,10 @@ bookingButton.onclick = function(){
 };
 
 bookingForm.addEventListener("submit", function (evt){
-  if(!quantityAdult){
+  if (quantityAdult === ""){
     evt.preventDefault();
+    bookingForm.classList.add("booking-error");
+    console.log("write something");
   } else {
      if (isStorageSupport) {
     localStorage.setItem("quantity-person", quantityAdult.value);
@@ -37,6 +40,7 @@ window.addEventListener("keydown", function (evt) {
       evt.preventDefault();
       bookingForm.classList.remove("booking-form");
       bookingForm.classList.add('booking-hidden');
+      bookingForm.classList.remove("booking-error");
     }
   }
 });
